@@ -47,11 +47,11 @@ namespace SQL2.Services
             int result = _sql.ExecuteCommand($"DELETE FROM Students WHERE Id={id}");
             if (result > 0)
             {
-                Console.WriteLine("Deleted successfully");
+                Console.WriteLine("Deleted");
             }
             else
             {
-                Console.WriteLine("Failed to delete");
+                Console.WriteLine("Failed");
             }
         }
         public void Update(Student student)
@@ -59,7 +59,7 @@ namespace SQL2.Services
             int result = _sql.ExecuteCommand($"UPDATE Students SET Name='{student.Name}', Surname='{student.Surname}', Age={student.Age} WHERE Id={student.Id}");
             if (result > 0)
             {
-                Console.WriteLine("Success");
+                Console.WriteLine("Updated");
             }
             else
             {

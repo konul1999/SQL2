@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ namespace SQL2.Data
 {
     internal class Sql
     {
-        private const string connectionString = "Server=;Database=;Trusted_Connection=True;Integrated Security=True";
+        private const string connectionString = "server=.;database=ADONETDB;trusted_connection=True;Integrated Security=True";
         private static SqlConnection _connection = new SqlConnection(connectionString);
 
         public int ExecuteCommand(string cmd)
