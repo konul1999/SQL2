@@ -10,7 +10,7 @@ namespace SQL2.Data
 {
     internal class Sql
     {
-        private const string connectionString = "server=.;database=ADONETDB;trusted_connection=True;Integrated Security=True";
+        private const string connectionString = "server=.;database=AdoNet;trusted_connection=True;Integrated Security=True";
         private static SqlConnection _connection = new SqlConnection(connectionString);
 
         public int ExecuteCommand(string cmd)

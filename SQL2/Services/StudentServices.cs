@@ -66,6 +66,22 @@ namespace SQL2.Services
                 Console.WriteLine("Failed");
             }
         }
-
+        public Student GetById(int id)
+        {
+            DataTable table = _sql.ExecuteQuery($"SELECT * FROM Students WHERE Id={id}");
+            if (table.Rows.Count == 0)
+            {
+                return null;
+            }
+            DataRow row = table.Rows[0];
+            Student student = new Student()
+            {
+                Id = (int)row[0],
+                Name = row[1].ToString(),
+                Surname = row[2].ToString(),
+                Age = (int)row[3]
+            };
+            return student;
+        }
     }
 }
